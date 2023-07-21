@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap');
+
+    .head {
+      font-family: 'Hanken Grotesk', sans-serif;
+
+    }
+
+    .float-container {
+      display: flex;
+      /* Use flexbox to create a flex container */
+      justify-content: center;
+      /* Center the content horizontally */
+      align-items: center;
+      /* Center the content vertically */
+      border: 3px solid #fff;
+      padding: 20px;
+    }
+
+    .box {
+      display: flex;
+      /* Use flexbox to create a flex container for div-1 and div-2 */
+      border-radius: 10%;
+      margin: 20%;
+      padding: 5px;
+      padding-left: 0rem;
+      background-color: transparent;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    }
+
+    .float-child {
+      flex: 1;
+      /* Distribute the available space evenly between div-1 and div-2 */
+      margin: 10px;
+      /* Add some spacing between div-1 and div-2 */
+    }
+
+    .outer-container {
+      border-radius: 25px;
+      background-color: #4936f2;
+      padding: 20px;
+      width: 200px;
+      height: 200%;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    p {
+      color: #bfbeff;
+
+    }
+
+    .inner-circle {
+      position: relative;
+      background: #4530e5;
+      border-radius: 70%;
+      height: 100px;
+      width: 100px;
+      margin: 0px 0px 0px 100px;
+    }
+
+    .img {
+      float: left;
+      margin-right: 5px;
+    }
+
+    .summary-box {
+      border-radius: 10px;
+      display: flex;
+      /* Use flexbox to create a flex container for summary items */
+      justify-content: space-between;
+      /* Spread items evenly within the summary box */
+      align-items: center;
+      /* Align items vertically at the center */
+      margin-bottom: 10px;
+      /* Add some spacing between summary boxes */
+      padding: 10px;
+      /* Add padding to the summary boxes */
+      height: 30px;
+    }
+
+    .summary-box div {
+      display: flex;
+      /* Create a flex container for the image and h5 tag */
+      align-items: center;
+      /* Align items vertically at the center */
+    }
+
+    .summary-box img {
+      margin-right: 10px;
+      /* Add some spacing between the image and h5 tag */
+    }
+
+    /* New styles for the attribution */
+    footer.attribution {
+      background-color: #f9f9f9;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    footer.attribution a {
+      color: #555;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer.attribution a:hover {
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="float-container">
+    <div class="box">
+      <div id="div-1" class="float-child outer-container">
+        <p>Your Result</p>
+        <div class="inner-circle" style="text-align: center; padding:2px;margin:0 auto">
+          <h1 style="color: white;">76</h1>
+          <p>of 100</p>
+        </div>
+        <h2 style="color: white;">Great</h2>
+        <p>You scored higher than 65% of the people who have taken these tests.</p>
+      </div>
+
+      <div id="div-2" class="float-child">
+        <h3>Summary</h3>
+
+        <div class="summary-box"
+          style=" padding: 0.5rem; padding-left: 30px; background-color: #fff6f5; text-decoration-color: hsl(0, 100%, 67%);">
+          <div>
+            <img
+              src="/assets/images/icon-reaction.svg"
+              class="img" alt="">
+            <h5 style="color: #d27f7f;">Reaction</h5>
+          </div>
+          <div>
+            <span>80 / 100</span>
+          </div>
+        </div>
+
+        <div class="summary-box"
+          style=" padding: 0.5rem; padding-left: 30px; background-color: #fffbf2; text-decoration-color: hsl(39, 100%, 56%);">
+          <div>
+            <img
+              src="/assets/images/icon-memory.svg"
+              class="img" alt="">
+            <h5 style="color: #f3ce6f;">Memory</h5>
+          </div>
+          <div>
+            <span>92 / 100</span>
+          </div>
+        </div>
+
+        <div class="summary-box"
+          style=" padding: 0.5rem; padding-left: 30px; background-color: #f2fafa; text-decoration-color: hsl(166, 100%, 37%);">
+          <div>
+            <img
+              src="/assets/images/icon-verbal.svg"
+              class="img" alt="">
+            <h5 style="color: #51b59c;"> Verbal</h5>
+          </div>
+          <div>
+            <span>61 / 100</span>
+          </div>
+        </div>
+
+        <div class="summary-box"
+          style=" padding: 0.5rem; padding-left: 30px; background-color: #f3f3fd; text-decoration-color: hsl(234, 85%, 45%);">
+          <div>
+            <img
+              src="/assets/images/icon-visual.svg"
+              class="img" alt="">
+            <h5 style="color: #2732b8;">Visual</h5>
+          </div>
+          <div>
+            <span>72 / 100</span>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-lg"
+          style="color: white; background-color: #303b59; border-radius: 52px; width: 100%; height: 35px; border: none; ">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Skill_full_sky</a>.
+  </footer>
+
+</body>
+
+</html>
